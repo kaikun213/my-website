@@ -1,0 +1,249 @@
+/*
+* Credits for CSS of Box-Theme header to : Ahmed Eissa (www.ahmedessa.net)
+*/
+
+
+/* Table of Content
+==================================================
+	- Google fonts & font family -
+	- General -
+    - typography -
+  - box intro section -
+  - mouse - 
+  - Responsive media queries -
+*/
+
+.landing {
+    height: 100%;
+    
+    .no-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .no-padding [class^="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .main-container {
+        padding: 100px 0;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    
+    a {
+        -webkit-transition: all .3s;
+        transition: all .3s
+    }
+    
+    .uppercase {
+        text-transform: uppercase;
+    }
+    
+    .h-30 {
+        height: 30px
+    }
+    
+    .h-10 {
+        height: 10px
+    }
+    
+    .color {
+        color: #0395DE;
+        font-size: 11px;
+    }
+    
+    
+    /* typography
+    ==================================================*/
+    
+    h1 {
+        color: #393939;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+    
+    h3 {
+        color: #393939;
+    }
+    
+    h5 {
+        color: #0395DE; /* Original: #ffbf00 */;
+  }
+}
+
+
+/* box-intro
+==================================================*/
+
+.box-intro {
+  text-align: center;
+  display: table;
+  height: 100vh;
+  width: 100%;
+}
+
+.box-intro .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.box-intro em {
+  font-style: normal;
+  text-transform: uppercase
+}
+
+b i:last-child {
+  color: #0395DE !important;
+}
+
+.box-intro h5 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #999;
+  line-height: 1.7
+}
+
+/* mouse effect */
+
+.mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #888;
+  -webkit-animation: intro 1s;
+  animation: intro 1s;
+}
+
+.scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #888;
+  -webkit-animation: finger 2s infinite;
+  animation: finger 2s infinite;
+}
+
+@-webkit-keyframes intro {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
+
+@keyframes intro {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes finger {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+  }
+}
+
+@keyframes finger {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+  }
+}
+
+
+/* backto top
+==================================================*/
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  line-height: 40px;
+  font-size: 20px;
+  right: 10px;
+  text-align: center;
+  color: #fff;
+  background: rgba(51, 114, 223, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+  opacity: .5;
+}
+
+.no-touch .cd-top:hover,
+.no-touch .cd-top:focus {
+  background-color: #0395DE; /* Original: #ffbf00 */;
+  opacity: 1;
+  color: #fff;
+}
+
+/* Responsive media queries
+==================================================*/
+
+@media only screen and (max-width: 670px) {
+  .box-intro h5 {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .box-intro h5 {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .box-intro h5 {
+      font-size: 12px;
+  }
+}

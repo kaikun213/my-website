@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -6,5 +8,38 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: 'jakobheyder.com',
+  },
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/LayoutComponents/Layout`),
+      },
+    },    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pdfs`,
+        path: path.join(__dirname, `src`, `data`, `pdf`),
+      },
+    },
+  ],
 }

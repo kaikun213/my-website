@@ -1,0 +1,132 @@
+.about {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px;
+
+  .content {
+    display: grid;
+    
+    .profile-img {
+      grid-area: image;
+      max-width: 900px;
+
+      .gatsby-image-wrapper {
+        box-shadow: 3px 10px 20px 0 rgba(0,0,0,0.3);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .profile-text {
+      grid-area: text;
+
+      b {
+        color: black;
+      }
+    }
+
+    .profile-contact {
+      grid-area: contact;
+
+      text-align: center;
+
+      .github:hover {
+        color: rgb(0, 0, 0);
+      }
+
+      .linkedin:hover {
+        color: rgb(0, 102, 153);
+      }
+
+      .resume:hover {
+        color: rgb(0, 102, 0);
+      }
+      
+      svg {
+        margin: 15px;
+
+        
+      }
+    }
+  }
+}
+
+
+/* Responsive media queries
+==================================================*/
+
+@media only screen and (min-width: 992px) {
+  .main {
+    height: 1100px;
+  }
+  .about {
+    .content {
+      grid-template-areas: 
+        'image text'
+        'image contact';
+      grid-template-columns: 3fr 3fr;
+
+      .profile-text {
+        margin-top: 80px;
+      }
+
+      .profile-contact {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    height: 1500px;
+  }
+  .about {
+    .content {
+      grid-template-areas: 
+      'image'
+      'text'
+      'contact';
+      grid-template-columns: 1fr;
+
+      .profile-text {
+        margin-top: 80px;
+        margin-left: 65px;
+        margin-right: 65px;
+      }
+
+      .profile-contact {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    height: 1600px;
+  }
+  .about {
+    .content {
+      grid-template-areas: 
+      'image'
+      'text'
+      'contact';
+      grid-template-columns: 1fr;
+
+      .profile-img {
+        margin: 15px;
+      }
+
+      .profile-text {
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .profile-contact {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.gear-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .d-block {
+    display: block;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  div {
+    font-size: 14pt;
+  }
+
+  .lds-gears {
+    background: none;
+  }
+}

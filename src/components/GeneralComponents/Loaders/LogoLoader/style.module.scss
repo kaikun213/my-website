@@ -1,0 +1,39 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.text {
+  width: 180px;
+  height: 450px;
+  position: absolute;
+  top: 60%;
+  bottom: 0;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: -110px;
+  border-radius: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  text-align: center;
+  font-size: 200%;
+}
+
+.none {
+  display: none;
+}
