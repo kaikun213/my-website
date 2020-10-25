@@ -19,6 +19,7 @@
 
     .profile-text {
       grid-area: text;
+      font-size: 120%;
 
       b {
         color: black;
@@ -56,9 +57,6 @@
 ==================================================*/
 
 @media only screen and (min-width: 992px) {
-  .main {
-    height: 1100px;
-  }
   .about {
     .content {
       grid-template-areas: 
@@ -78,9 +76,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .main {
-    height: 1500px;
-  }
   .about {
     .content {
       grid-template-areas: 
@@ -103,9 +98,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .main {
-    height: 1600px;
-  }
   .about {
     .content {
       grid-template-areas: 

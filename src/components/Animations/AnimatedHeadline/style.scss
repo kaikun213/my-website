@@ -1,10 +1,11 @@
 /* General */
 
 .landing-headers {
-  font-size: 120% !important;
   max-width: 1000px;
   margin-right: auto !important;
   margin-left: auto !important;
+  padding-left: 15px;
+  padding-right: 15px;
 
   .selected {
     font-weight: bold;
@@ -19,6 +20,25 @@
 .cd-headline {
   min-height: 108px;
 }
+
+@media only screen and (min-width: 992px) {
+  .landing-headers {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .landing-headers {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .landing-headers {
+    font-size: 120%;
+  }
+}
+
 
 
 /* Animations from https://codyhouse.co/ , all credits to him. */

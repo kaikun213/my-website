@@ -23,7 +23,7 @@ const About = ({ data }) => {
       defaultStyle={{
         transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
         left: '100%',
-        position: 'absolute',
+        position: 'relative',
         width: '100%',
       }}
       transitionStyles={{

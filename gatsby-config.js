@@ -13,6 +13,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        javascriptEnabled: true,
+      }
+    },
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     {

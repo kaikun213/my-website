@@ -1,17 +1,27 @@
 .layout-wrapper {
-  display: flex;
   min-height: 100vh;
 
-  /* Direction of the items, can be row or column */
-  flex-direction: column;
-  align-items: stretch;
 
-  .main {
-    flex-grow: 1;
+  .header {
+    min-height: 110px;
   }
 
-  .header, .main, .footer {
-    min-height: 110px;
-    flex-shrink: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .footer {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin-top: 50px;
   }
 }

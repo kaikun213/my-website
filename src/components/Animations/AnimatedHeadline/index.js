@@ -5,18 +5,18 @@ import Reveal, { AttentionSeeker, Fade, Slide, } from "react-awesome-reveal";
 import { keyframes } from "@emotion/core";
 import './style.scss'
 import { GridList, GridListTile } from '@material-ui/core';
+import { Affix } from 'rsuite';
 
 const INITIAL_DELAY = 1000
 const LETTERS_DELAY = 120
 const ANIMATION_DELAY = 1500
 
 const AnimatedHeadline = (props) => {
-  const { phrases=[], hidePreview=false, headers, subtext, } = props
+  const { phrases=[], hidePreview=false, headers, subtext, filter, onSelect } = props
   const [animationDelay, setAnimationDelay] = useState(INITIAL_DELAY)
   const [currentLetter, setCurrentLetter] = useState(-1)
   const [currentPhrase, setCurrentPhase] = useState(0)
   const [typeFinished, setTypeFinished] = useState(hidePreview)
-  const [selected, setSelected] = useState(0)
 
   const tick = () => {
     const currentPhraseLength = phrases[currentPhrase].name.length
@@ -99,22 +99,24 @@ const AnimatedHeadline = (props) => {
 `;
 
   const animatedPhrases = typeFinished ? (
-    <Slide triggerOnce fraction={0.5}>
-      <AttentionSeeker effect="headShake" delay={1000}>
-        <GridList cellHeight={120} className="landing-headers" cols={headers.length}>
-          {headers.map((header, idx) => (
-            <GridListTile key={header} cols={1}>
-              <span 
-                onClick={() => setSelected(idx)}
-                className={selected === idx ? 'selected' : ''}
-              >
-                {header}
-              </span>
-            </GridListTile>
-          ))}
-        </GridList>
-      </AttentionSeeker>
-    </Slide>
+    <Affix top={50}>
+      <Slide triggerOnce fraction={0.5}>
+        <AttentionSeeker effect="headShake" delay={1000}>
+          <GridList cellHeight={120} className="landing-headers" cols={headers.length}>
+            {headers.map((header) => (
+              <GridListTile key={header.key} cols={1}>
+                <span 
+                  onClick={() => onSelect(header)}
+                  className={filter.key === header.key ? 'selected' : ''}
+                >
+                  {header.name}
+                </span>
+              </GridListTile>
+            ))}
+          </GridList>
+        </AttentionSeeker>
+      </Slide>
+    </Affix>
   ) : (
     <h1 className="cd-headline letters type">
       <span className="cd-words-wrapper waiting">

@@ -82,7 +82,7 @@
 .box-intro {
   text-align: center;
   display: table;
-  height: 100vh;
+  height: calc(100vh - 182px);
   width: 100%;
 }
 
@@ -110,12 +110,10 @@ b i:last-child {
 /* mouse effect */
 
 .mouse {
-  position: absolute;
   width: 22px;
   height: 42px;
-  bottom: 40px;
-  left: 50%;
-  margin-left: -12px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   border: 2px solid #888;
   -webkit-animation: intro 1s;
@@ -182,68 +180,74 @@ b i:last-child {
 }
 
 
-/* backto top
-==================================================*/
-
-.cd-top {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  position: fixed;
-  bottom: 20px;
-  line-height: 40px;
-  font-size: 20px;
-  right: 10px;
-  text-align: center;
-  color: #fff;
-  background: rgba(51, 114, 223, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
-}
-
-.cd-top.cd-is-visible,
-.cd-top.cd-fade-out,
-.no-touch .cd-top:hover {
-  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  transition: opacity .3s 0s, visibility 0s 0s;
-}
-
-.cd-top.cd-is-visible {
-  /* the button becomes visible */
-  visibility: visible;
-  opacity: 1;
-}
-
-.cd-top.cd-fade-out {
-  opacity: .5;
-}
-
-.no-touch .cd-top:hover,
-.no-touch .cd-top:focus {
-  background-color: #0395DE; /* Original: #ffbf00 */;
-  opacity: 1;
-  color: #fff;
-}
-
 /* Responsive media queries
 ==================================================*/
 
-@media only screen and (max-width: 670px) {
-  .box-intro h5 {
-      font-size: 12px;
+@media only screen and (min-width: 992px) {
+  .main {
+    .projects {
+      display: grid;
+      grid-template-areas: "list card";
+      grid-template-columns: 3fr 2fr;
+    
+      margin-top: 50px;
+    
+      .projects-list-wrapper {
+        grid-area: list;
+      }
+    
+      .project-card {
+        grid-area: card;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 520px) {
-  .box-intro h5 {
-      font-size: 12px;
+@media only screen and (max-width: 992px) {
+  .main {
+    .projects {
+      display: grid;
+      grid-template-areas: 
+        "list"
+        "card";
+
+      .projects-list {
+        grid-area: list;
+        height: 700px;
+      }
+    
+      .project-card {
+        grid-area: card;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 420px) {
-  .box-intro h5 {
-      font-size: 12px;
+@media only screen and (max-width: 600px) {
+  .main {
+    .box-intro {
+      font-size: small;
+      line-height: normal;
+    }
+
+    .projects {
+      .projects-list-wrapper {
+        height: 550px;
+      }
+    
+      .project-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+    }
   }
 }

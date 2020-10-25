@@ -1,0 +1,130 @@
+{
+  "projects": [
+    {
+      "date": "2010-01-01T00:00:00",
+      "textDate": "2010-14",
+      "title": "Private game server administration",
+      "description": 
+        "During my junior and senior highschool years I was actively working with friends to host private servers for our favorite games. This mostly involved simple server administration tasks and some game manuscript editing in lua. I learned a lot about online communities and had my first coding experiences. Unfortunately, the code is not available anymore.",
+      "text": null,
+      "tags": ["FreeBSD", "Lua"],
+      "categories": ["SOFTWARE"],
+      "github": null,
+      "website": null,
+      "avatar": "game-server-logo.jpeg",
+      "image": "game-server-banner.jpeg"  
+    },
+    {
+      "date": "2012-01-01T00:00:00",
+      "textDate": "2012/13",
+      "title": "Chess with heuristic-based adversaries",
+      "description": 
+        "In highschool our informatics course worked together on a project to implement a chess game and write heuristic-based adversaries. Using DB-Lookups of professional moves based on the game state and internal tactics we played a competitive tournament on the schools open-day. My very first naive AI experiences.",
+      "text": null,
+      "tags": ["Delphi"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/delphi-chess",
+      "website": null,
+      "avatar": "chess-logo.png",
+      "image": "chess-banner.jpg"
+    },
+    {
+      "date": "2016-05-01T00:00:00",
+      "textDate": "2016",
+      "title": "Smugglershop - web programming",
+      "description": 
+        "In the end of our first year at university, we developed a small webshop. Even though the focus of the project was on requirements and design documentation, we added several interesting features such as ratings, review comments, live-filtering, quick checkout and more. The code had to be written with JSP.",
+      "text": null,
+      "tags": ["Java", "JSP"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/uni-vt16-smuggler-webshop",
+      "website": null,
+      "avatar": "smuggler-logo.png",
+      "image": "smuggler-banner.png"
+    },
+    {
+      "date": "2016-09-01T00:00:00",
+      "textDate": "2016/17",
+      "title": "SmarterTransfer - API backend",
+      "description": 
+        "In autumn 2016 a friend of mine approached me with a business idea: finally getting rid of the prepaid cards in football stadiums and other sport facilities. Hooked from the rise of mobile payments we developed a first prototype and tried to get smaller clubs to sign up. Even though the projects did not turn into a success, I gathered experience developing a fully production ready backend architecture.",
+      "text": null,
+      "tags": ["Java", "Spring", "Mysql"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/smarter-transfer",
+      "website": null,
+      "avatar": "mobile-payment-logo.png",
+      "image": "mobile-payment-banner.jpeg"
+    },
+    {
+      "date": "2017-05-01T00:00:00",
+      "textDate": "2017",
+      "title": "Face recognition app",
+      "description": 
+        "As a final project of our second year in university we developed a face recognition app. Together with a local company we iterated over the requirements documentation, the software design and prototype implementation. In the end we managed to build a functioning face recognition prototype app for android and iOS utilizing a deep learning API.",
+      "text": null,
+      "tags": ["Java", "Javascript", "Swift"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/uni-vt17-face-recognition",
+      "website": null,
+      "avatar": "face-recognition-logo.jpeg",
+      "image": "face-recognition-banner.jpeg" 
+    },
+    {
+      "date": "2017-06-01T00:00:00",
+      "textDate": "2017",
+      "title": "Södra Hackathon - Winning Team",
+      "description": 
+        "Together with some of my classmates we participated in the 48 hours Södra Hackathon. They provided us with a bunch of data and we developed a concept and prototype for a decentralized mapping application for better supply chain management and transparency. Our group 'TreeHack' won the competition for best idea.",
+      "text": null,
+      "tags": ["Javascript"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/soedra-hackathon-treehack",
+      "website": null,
+      "avatar": "södra-logo.jpeg",
+      "image": "södra-banner.jpeg" 
+    },
+    {
+      "date": "2017-12-01T00:00:00",
+      "textDate": "2017",
+      "title": "Honors Algorithms Course at HKUST",
+      "description": 
+        "During my exchange in Hongkong I took the honors algorithms course. The teacher was great and the topics highly interesting, but we did not have time next to the proofs and theotetical coverage to implement them. So I decided to implement a collection of the algorithms on my own and gain deeper understanding.",
+      "text": null,
+      "tags": ["Python"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/kaikun213/uni-ht17-comp3711h-algorithms-collection",
+      "website": null,
+      "avatar": "algorithms-logo.jpeg",
+      "image": "algorithms-banner.jpeg" 
+    },
+    {
+      "date": "2017-07-01T00:00:00",
+      "textDate": "2017",
+      "title": "Ethereum VM Debugger Prototype",
+      "description": 
+        "In my time as Research Intern at Parity Technologies I extended the reactive oo7-bond libraries and prototyped a debugger for the Ethereum VM. The company started the Polkadot project and grew rapidly since then from 15 to over 80 employees. I learned a lot from many brilliant people there.",
+      "text": null,
+      "tags": ["Javascript", "React"],
+      "categories": ["SOFTWARE"],
+      "github": "https://github.com/paritytech",
+      "website": "https://www.parity.io/",
+      "avatar": "parity-logo.png",
+      "image": "parity-banner.png" 
+    },
+    {
+      "date": "2018-08-01T00:00:00",
+      "textDate": "2018 - Now",
+      "title": "Ventury Analytics - Founder & Technical Lead",
+      "description": 
+        "The largest project I have worked on so far was the founding of our company. Over multiple years I have iteratively implemented different full-stack features, developed a deployment pipeline, tested and documented the system architecture and much more. Now the software has grown to a feature-rich SaaS platform and is used in production daily.",
+      "text": null,
+      "tags": ["Java", "Spring", "Javascript", "React", "Kubernetes", "Postgresql"],
+      "categories": ["SOFTWARE"],
+      "github": null,
+      "website": "https://ventury-analytics.de/",
+      "avatar": "ventury-logo.png",
+      "image": "ventury-banner.png" 
+    }
+  ]
+}

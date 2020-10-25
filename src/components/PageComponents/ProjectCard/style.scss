@@ -1,0 +1,17 @@
+.project-card {
+  .tags {
+    margin-left: 2px;
+  }
+
+  .github-icon {
+    &:hover {
+      color: black;
+    }
+  }
+
+  .home-icon {
+    &:hover {
+      color: black;
+    }
+  }
+}
