@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { Helmet } from "react-helmet";
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, } from 'gatsby';
 import AnimatedHeadline from "../components/Animations/AnimatedHeadline";
 import ProjectsList from "../components/PageComponents/ProjectsList";
 import ProjectCard from "../components/PageComponents/ProjectCard";
@@ -18,24 +18,26 @@ const filters = [
   { name: "Computational Biology", key: "BIO" },
 ]
 
-const Landing = () => {
-  const [projects, setProjects] = useState([])
-  const [project, setProject] = useState(undefined)
-  const [filter, setFilter] = useState(filters[0])
-  const [showScrollDown, setShowScrollDown] = useState({ opacity: "1" })
-
-  const { allFile: { edges } } = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativeDirectory: { eq: "projects" }}) {
-        edges {
-          node {
-            relativePath
-            publicURL
-          }
-        }
+const dataToProjects = (data) => {
+  const { allFile: { edges } } = data
+  const { projects } = projectsData
+  const edgeMap = arrToObj(edges, e => e.node.relativePath, e => e.node.publicURL)
+  return projects
+    .sort((p1,p2) => Date.parse(p2.date) - Date.parse(p1.date))
+    .map(p => {
+      return {
+        ...p,
+        image: edgeMap[`projects/${p.image}`],
+        avatar: edgeMap[`projects/${p.avatar}`]
       }
-    }
-  `)
+    })
+}
+
+const Landing = ({ data }) => {
+  const [projects, setProjects] = useState(dataToProjects(data))
+  const [filter, setFilter] = useState(filters[0])
+  const [project, setProject] = useState(projects.filter(p => p.categories.includes(filter.key))[0])
+  const [showScrollDown, setShowScrollDown] = useState({ opacity: "1" })
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,19 +53,13 @@ const Landing = () => {
   }, [])
 
   useEffect(() => {
-    const { projects } = projectsData
-    const edgeMap = arrToObj(edges, e => e.node.relativePath, e => e.node.publicURL)
-    projects.forEach(p => {
-      p.image = edgeMap[`projects/${p.image}`]
-      p.avatar = edgeMap[`projects/${p.avatar}`]
-    })
-    projects.sort((p1,p2) => Date.parse(p2.date) - Date.parse(p1.date))
-    setProjects(projects)
-    setProject(projects.filter(p => p.categories.includes(filter.key))[0])
+    const updatedProjects = dataToProjects(data)
+    setProjects(updatedProjects)
+    setProject(updatedProjects.filter(p => p.categories.includes(filter.key))[0])
     return () => {
       firstTimeLoaded = false
     }
-  }, [edges])
+  }, [data])
 
   const preview = firstTimeLoaded
 
@@ -73,52 +69,51 @@ const Landing = () => {
   
 
   return (
-    <PageTransition
-      defaultStyle={{
-        transition: 'right 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
-        right: '100%',
-        position: 'relative',
-        width: '100%',
-      }}
-      transitionStyles={{
-        entering: { right: '0%' },
-        entered: { right: '0%' },
-        exiting: { right: '100%' },
-      }}
-    >
-      <div className="landing">
-        <Helmet title="Homepage" />
-        <section className="box-intro">
-          <AnimatedHeadline
-              phrases={
-                  [
-                    { name: "Data.", },
-                    { name: "Code.", },
-                    { name: "Bio.", },
+    <div className="landing">
+      <Helmet title="Homepage" />
+      <section className="box-intro">
+        <AnimatedHeadline
+            phrases={
+                [
+                  { name: "Data.", },
+                  { name: "Code.", },
+                  { name: "Bio.", },
 
-                  ]
-              }
-              headers={filters}
-              subtext="For the sake of learning"
-              hidePreview={!preview}
-              filter={filter}
-              onSelect={f => setFilter(f)}
-          />
-        </section>
-        <div 
-          className="mouse" 
-          style={showScrollDown}
-        >
-          <div className="scroll"></div>
-        </div>
-
-        <div className="projects">
-          <ProjectsList projects={filteredProjects} filter={filter} onSelect={p => setProject(p)} />
-          <ProjectCard project={project} />
-        </div>
+                ]
+            }
+            headers={filters}
+            subtext="For the sake of learning"
+            hidePreview={!preview}
+            filter={filter}
+            onSelect={f => setFilter(f)}
+        />
+      </section>
+      <div 
+        className="mouse" 
+        style={showScrollDown}
+      >
+        <div className="scroll"></div>
       </div>
-    </PageTransition>
+
+      <div className="projects">
+        <ProjectsList projects={filteredProjects} filter={filter} onSelect={p => setProject(p)} />
+        <ProjectCard project={project} />
+      </div>
+    </div>
   )
 }
 
 export default Landing
+
+export const query = graphql`
+  query {
+    allFile(filter: { relativeDirectory: { eq: "projects" }}) {
+      edges {
+        node {
+          relativePath
+          publicURL
+        }
+      }
+    }
+  }
+`
