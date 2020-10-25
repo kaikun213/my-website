@@ -7,7 +7,7 @@ const ProjectsList = (props) => {
 
   // number of rows and minimum number of columns, you can adjust as you please
   const n_rows = 3; // at least 1 !!!
-  const n_cols_min = 3; // at least 1 !!!
+  const n_cols_min = projects.length >= 8 ? 3 : 2; // at least 1 !!!
   const n_cols_max = n_cols_min + 1, n_cols_sum = n_cols_max + n_cols_min;
 
   const imgs = projects.map(p => p.avatar || 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&fm=jpg')

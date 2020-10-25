@@ -125,6 +125,90 @@
       "website": "https://ventury-analytics.de/",
       "avatar": "ventury-logo.png",
       "image": "ventury-banner.png" 
+    },
+    {
+      "date": "2018-01-01T00:00:00",
+      "textDate": "2018",
+      "title": "Deeplearning.ai specialization",
+      "description": 
+        "In 2018 I completed the excellent deep learning specialization courses from Andrew Ng on Coursera. They cover a variety of topics from concepts such as regularization and hyperparameter tuning to extensive network architectures for images or sequences (CNNs/RNNs).The courses give an excellent introduction into deep learning and complemented my university machine learning courses well.",
+      "text": null,
+      "tags": ["Python", "Deep Learning", "CNNs", "RNNs"],
+      "categories": ["DATA"],
+      "github": "https://github.com/kaikun213/deeplearning.ai-mnist",
+      "website": "https://www.deeplearning.ai/",
+      "avatar": "deep-learning-logo.png",
+      "image": "deep-learning-banner.png" 
+    },
+    {
+      "date": "2018-05-01T00:00:00",
+      "textDate": "2018",
+      "title": "Thesis Project - Hierarchical Temporal Memory Agent",
+      "description": 
+        "My bachelor thesis was based on the hierarchical temporal memory (HTM) architecture of Numenta. They focus on biological plausible models of the neocortex and sparse coding. Their model uses pyramidal neurons and hebbian learning rules. My thesis explored an integration of temporal difference learning based on a model from the basal ganglia to create a simple learning agent. Based on OpenAI's environments I also developed a remote setup that could be monitored via a smartphone. The thesis was awarded a scholarship by Sparbanksstiftelsen Kronan.",
+      "text": null,
+      "tags": ["Python", "HTM", "TD-Learning", "Reinforcement learning"],
+      "categories": ["DATA", "BIO"],
+      "github": "https://github.com/kaikun213/my-neural-net",
+      "website": "http://urn.kb.se/resolve?urn=urn:nbn:se:lnu:diva-75868",
+      "avatar": "bachelor-thesis-logo.png",
+      "image": "bachelor-thesis-banner.png" 
+    },
+    {
+      "date": "2019-09-01T00:00:00",
+      "textDate": "2019",
+      "title": "Research Project - Continuous Bayesian Learning Rule in HTM",
+      "description": 
+        "Together with Leo Zeitler we incorporated continuous bayesian learning rules into the discrete temporal memory network architecture from Numenta. The new model allows a mathematical investigation of the network dynamics. The idea was closely related to the bayesian confidence propagation neural networks developed by Anders Lansner at KTH.",
+      "text": null,
+      "tags": ["Python", "HTM", "Bayesian Learning", "BCPNN"],
+      "categories": ["DATA", "BIO"],
+      "github": "https://github.com/kaikun213/htm-bayesian-learning",
+      "website": "https://en.wikipedia.org/wiki/Bcpnn",
+      "avatar": "bcpnn-logo.jpeg",
+      "image": "bcpnn-banner.gif" 
+    },
+    {
+      "date": "2020-05-01T00:00:00",
+      "textDate": "2020",
+      "title": "Thesis Project - Knowledge Base Augmentation",
+      "description": 
+        "My master thesis explored the possibilities to use Fonduer, a machine-learning-based KBC system for richly formatted data for extracting relevant information from spreadsheet data. The system is based on candidate generation and filtering through a trained Bi-LSTM with attention. I extended the Fonduer framework with classes to deal with the rich structure of spreadsheets, i.e. multiple tables, references and different cell formats by training a separate network to infer cell types.",
+      "text": null,
+      "tags": ["Python", "HTM", "Bayesian Learning", "BCPNN"],
+      "categories": ["DATA"],
+      "github": "https://github.com/kaikun213/fonduer-electricity",
+      "website": "http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-278824",
+      "avatar": "master-thesis-logo.png",
+      "image": "master-thesis-banner.png" 
+    },
+    {
+      "date": "2018-03-01T00:00:00",
+      "textDate": "2018",
+      "title": "HBP - Young Researchers Workshop",
+      "description": 
+        "Since LNU did not have a department with neuroscience or cognitive systems research, I travelled to munich to meet some like-minded people at a cognitive science workshop for young researchers organized by the human brain project (HBP). It was a great experience and tought me more about the different levels of abstractions, especially closer experimentalist models.",
+      "text": null,
+      "tags": ["Computational Biology", "Modelling"],
+      "categories": ["BIO"],
+      "github": null,
+      "website": "https://www.humanbrainproject.eu/en/education/participatecollaborate/curriculum/workshops/3rd-hbp-curriculum-workshop-series-cognitive-systems/",
+      "avatar": "hbp-logo.png",
+      "image": "hbp-banner.png" 
+    },
+    {
+      "date": "2018-09-01T00:00:00",
+      "textDate": "2018-2020",
+      "title": "Data Science Master - Courses Catalog",
+      "description": 
+        "In university we had several relevant courses on bachelor an master level, including Machine Learning I & II, Data Programming, Data Intensive Computing, Data Mining I & II, Artificial Intelligence Introduction and Data Visualization. I learned most of the basics, including frameworks such as Spark, Kafka, Tensorflow, Scikit-learn or Pandas, programmed smaller projects in Java, Scala, Python, Matlab and obtained an overview of the data science field. Some of the practical projects can be found in different repositories on my Github.",
+      "text": null,
+      "tags": ["Python", "Matlab", "Java", "Scala", "Spark", "Kafka", "Tensorflow", "Scikit-learn", "Pandas", "Machine Learning"],
+      "categories": ["DATA"],
+      "github": "https://github.com/kaikun213/uni-ht19-data-mining",
+      "website": null,
+      "avatar": "master-logo.jpeg",
+      "image": "master-banner.png" 
     }
   ]
 }

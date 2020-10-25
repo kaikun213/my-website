@@ -59,7 +59,7 @@ const Landing = () => {
     })
     projects.sort((p1,p2) => Date.parse(p2.date) - Date.parse(p1.date))
     setProjects(projects)
-    setProject(projects[0])
+    setProject(projects.filter(p => p.categories.includes(filter.key))[0])
     return () => {
       firstTimeLoaded = false
     }
