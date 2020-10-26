@@ -34,8 +34,8 @@ const dataToProjects = (data) => {
 }
 
 const offsetByScreenSize = (list=true) => {
-  if (window.screen.width <= 600) return -100;
-  if (window.screen.width <= 992) return list ? -50 : -100;
+  if (window.screen.width <= 600) return list ? 75 : -120;
+  if (window.screen.width <= 992) return list ? -50 : 0;
   return -150;
 }
 
