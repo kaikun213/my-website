@@ -33,7 +33,7 @@ const About = ({ data }) => {
       }}
     >
       <div className="about">
-        <Helmet title="About Me" />
+        <Helmet title="JakobHeyder.com - About" />
         <div className="content">
           <div className="profile-img">
             <Img fluid={data.profileImg.childImageSharp.fluid} />
@@ -44,8 +44,7 @@ const About = ({ data }) => {
             
             <br /><br />
             <i>What am I up to?</i>
-
-            <ul>
+            <ul className="profile-text-list">
               <li>
                 In 2018 I have co-founded <a href="https://ventury-analytics.de">Ventury Analytics</a>, one of the leading SaaS platforms in Germany. We help founders and venture capitalists with Captable-Management, Scenario Modelling and Exit calculations.
               </li>

@@ -10,7 +10,7 @@ const LogoLoader = ({ width = 500, height = 500, className, onClick }) => {
 
   const { file } = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "logo-animation-32px.jpg" }) {
+      file(relativePath: { eq: "logo-animation-32px.png" }) {
         name
         absolutePath
         relativePath

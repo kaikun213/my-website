@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, } from "@material-ui/core";
+import { Avatar, } from "rsuite";
 import { graphql, Link, useStaticQuery, } from "gatsby";
 import LogoLoader from '../../GeneralComponents/Loaders/LogoLoader';
 import './style.scss'
@@ -26,7 +26,7 @@ const Header = () => {
         </div>
         <div className="box-about-me">
           <Link to="/about/">
-            <Avatar alt="About me" src={file.publicURL} />
+            <Avatar alt="About me" src={file.publicURL} circle />
           </Link>
         </div>
     </header>
