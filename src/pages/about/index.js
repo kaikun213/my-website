@@ -7,6 +7,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import { graphql } from 'gatsby'
 import { Tooltip } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
+import OpenGraphMetaTags from '../../components/GeneralComponents/OpenGraphMetaTags';
 
 import './style.scss'
 
@@ -33,7 +34,9 @@ const About = ({ data }) => {
       }}
     >
       <div className="about">
-        <Helmet title="JakobHeyder.com - About" />
+        <Helmet title="JakobHeyder.com - About">
+          {OpenGraphMetaTags}
+        </Helmet>
         <div className="content">
           <div className="profile-img">
             <Img fluid={data.profileImg.childImageSharp.fluid} />

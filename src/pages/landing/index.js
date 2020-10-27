@@ -7,6 +7,7 @@ import ProjectsList from "../../components/PageComponents/ProjectsList";
 import ProjectCard from "../../components/PageComponents/ProjectCard";
 import projectsData from '../../data/projects/data.json'
 import { arrToObj } from '../../utils';
+import OpenGraphMetaTags from '../../components/GeneralComponents/OpenGraphMetaTags';
 
 import './style.scss'
 
@@ -96,7 +97,9 @@ const Landing = ({ data }) => {
   
   return (
     <div className="landing">
-      <Helmet title="JakobHeyder.com - Homepage" />
+      <Helmet title="JakobHeyder.com - Homepage">
+        {OpenGraphMetaTags}
+      </Helmet>
       <section className="box-intro">
         <AnimatedHeadline
             phrases={
